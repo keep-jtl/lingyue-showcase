@@ -3,24 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>凌越芯程 - 无人机全链路安全模组</title>
+<title>凌越芯程｜无人机全链路安全模组</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, "Microsoft YaHei", sans-serif; background: #f5f5f5; }
-.header { background: #1a1a2e; color: white; padding: 20px; text-align: center; }
-.header h1 { font-size: 24px; margin-bottom: 8px; }
-.header p { color: #aaa; font-size: 14px; }
-.container { max-width: 1200px; margin: 20px auto; padding: 0 20px; }
-iframe { width: 100%; height: 80vh; border: none; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, "Microsoft YaHei", sans-serif;
+  background: #0a0a1a;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+.hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+  background: linear-gradient(180deg, #0d0d2b 0%, #0a0a1a 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle at 30% 50%, rgba(60,120,255,0.08) 0%, transparent 50%),
+              radial-gradient(circle at 70% 50%, rgba(180,60,255,0.06) 0%, transparent 50%);
+}
+.hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4a9eff, #b46bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 16px;
+  position: relative;
+}
+.hero .tagline {
+  font-size: 18px;
+  color: #888;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+.hero .badges {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.badge {
+  padding: 6px 16px;
+  border: 1px solid rgba(74,158,255,0.3);
+  border-radius: 20px;
+  font-size: 13px;
+  color: #4a9eff;
+  background: rgba(74,158,255,0.05);
+}
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.tech-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 28px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.tech-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(74,158,255,0.3);
+}
+.tech-card .icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+.tech-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+.tech-card p {
+  font-size: 14px;
+  color: #999;
+}
+.deck {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+}
+.deck::-webkit-scrollbar { height: 8px; }
+.deck::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 4px; }
+.deck::-webkit-scrollbar-thumb { background: rgba(74,158,255,0.3); border-radius: 4px; }
+.slide {
+  flex: 0 0 420px;
+  scroll-snap-align: start;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.slide img {
+  width: 100%;
+  display: block;
+}
+.slide .label {
+  text-align: center;
+  padding: 8px;
+  font-size: 12px;
+  color: #666;
+  background: rgba(0,0,0,0.3);
+}
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #555;
+  font-size: 13px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
 </style>
 </head>
 <body>
-<div class="header">
-  <h1>凌越芯程｜无人机全链路安全模组</h1>
-  <p>飞盾 · RK3566 · 数据保护 / AI指令识别 / 防拆密钥保护</p>
+
+<div class="hero">
+  <h1>凌越芯程</h1>
+  <p class="tagline">外挂式无人机全链路安全模组 · 让每一次飞行都可控、可溯、可防</p>
+  <div class="badges">
+    <span class="badge">RK3566 平台</span>
+    <span class="badge">数据保护</span>
+    <span class="badge">AI 指令识别</span>
+    <span class="badge">防拆密钥保护</span>
+  </div>
 </div>
-<div class="container">
-  <iframe src="presentation.pdf#toolbar=1&navpanes=0&view=FitH"></iframe>
+
+<div class="section">
+  <h2 class="section-title">核心技术</h2>
+  <div class="tech-grid">
+    <div class="tech-card">
+      <div class="icon">🔒</div>
+      <h3>数据加密保护</h3>
+      <p>飞行数据全程加密存储与传输，防止数据泄露、篡改或伪造，保障飞行记录可信。</p>
+    </div>
+    <div class="tech-card">
+      <div class="icon">🤖</div>
+      <h3>AI 指令识别</h3>
+      <p>基于深度学习的指令异常检测，识别欺骗、劫持等恶意指令，实时阻断风险操作。</p>
+    </div>
+    <div class="tech-card">
+      <div class="icon">🛡️</div>
+      <h3>防拆密钥保护</h3>
+      <p>硬件级防拆设计，一旦物理拆封即自动销毁密钥，防止逆向工程和固件篡改。</p>
+    </div>
+  </div>
 </div>
+
+<div class="section">
+  <h2 class="section-title">项目展示</h2>
+  <div class="deck">
+    <div class="slide"><img src="pages/page_01.png" alt="封面"><div class="label">封面</div></div>
+    <div class="slide"><img src="pages/page_02.png" alt="痛点"><div class="label">行业痛点</div></div>
+    <div class="slide"><img src="pages/page_03.png" alt="方案"><div class="label">产品方案</div></div>
+    <div class="slide"><img src="pages/page_04.png" alt="架构"><div class="label">系统架构</div></div>
+    <div class="slide"><img src="pages/page_05.png" alt="硬件"><div class="label">硬件设计</div></div>
+    <div class="slide"><img src="pages/page_06.png" alt="软件"><div class="label">软件功能</div></div>
+    <div class="slide"><img src="pages/page_07.png" alt="安全"><div class="label">安全机制</div></div>
+    <div class="slide"><img src="pages/page_08.png" alt="场景"><div class="label">应用场景</div></div>
+    <div class="slide"><img src="pages/page_09.png" alt="市场"><div class="label">市场分析</div></div>
+    <div class="slide"><img src="pages/page_10.png" alt="财务"><div class="label">财务预测</div></div>
+    <div class="slide"><img src="pages/page_11.png" alt="团队"><div class="label">团队介绍</div></div>
+    <div class="slide"><img src="pages/page_12.png" alt="进度"><div class="label">项目进度</div></div>
+  </div>
+</div>
+
+<div class="footer">
+  重庆凌盾云科技有限公司 · 凌越芯程项目组
+</div>
+
 </body>
 </html>
